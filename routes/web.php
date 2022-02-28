@@ -27,4 +27,5 @@ Route::get('admin/addSubject', [AdminController::class, 'addSubject'])->name('ad
 Route::get('admin/addExam', [AdminController::class, 'addExam'])->name('admin.addExam');
 Route::get('admin/addClassSchedule', [AdminController::class, 'addClassSchedule'])->name('admin.addClassSchedule');
 Route::get('admin/editTeacher', [AdminController::class, 'editTeacher'])->name('admin.editTeacher');
+Route::get('admin/editStudent', [AdminController::class, 'editStudent'])->name('admin.editStudent');
 

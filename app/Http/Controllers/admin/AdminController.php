@@ -48,5 +48,9 @@ class AdminController extends Controller
         
         return view('admin.pages.editTeacher');
     }
+    public function editStudent(){
+        
+        return view('admin.pages.editStudent');
+    }
     
 }

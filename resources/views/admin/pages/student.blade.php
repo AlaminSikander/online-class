@@ -51,7 +51,7 @@
                                     <td>911 Deer Ridge Drive,USA</td>
                                     <td class="text-end">
                                         <div class="actions">
-                                            <a href="edit-student.html" class="btn btn-sm bg-success-light me-2">
+                                            <a href="{{route('admin.editStudent')}}" class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
                                             <a href="#" class="btn btn-sm bg-danger-light">
