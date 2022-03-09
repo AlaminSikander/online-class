@@ -14,7 +14,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <form>
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="form-title"><span>Time Table</span></h5>
@@ -22,49 +22,43 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Teacher Id</label>
-                                    <input type="text" class="form-control">
+                                    <input name="CS_TeacherID" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control">
+                                    <label>Teacher Name</label>
+                                    <input name="CS_TeacherName" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Section</label>
-                                    <input type="text" class="form-control">
+                                    <input name="CS_Class" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <input type="text" class="form-control">
+                                    <input name="CS_Subject" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Date</label>
-                                    <input type="date" class="form-control">
+                                    <input name="CS_date" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Start Time</label>
-                                    <input type="time" class="form-control">
+                                    <input name="CS_StartTime" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>End Time</label>
-                                    <input type="time" class="form-control">
+                                    <input name="CS_EndTime" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">

@@ -15,9 +15,6 @@
                     <a href="{{route('admin.teacher')}}"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.subject')}}"><i class="fas fa-book-reader"></i> <span>Subjects</span></a>
-                </li>
-                <li class="">
                     <a href="{{route('admin.exam')}}"><i class="fas fa-clipboard-list"></i> <span>Exam Schedule</span></a>
                 </li>
                 <li class="">

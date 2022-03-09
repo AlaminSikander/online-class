@@ -15,7 +15,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <form>
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="form-title"><span>Exam Information</span></h5>
@@ -23,16 +23,14 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Exam Name</label>
-                                    <input type="text" class="form-control">
+                                    <input name="examName" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select class="form-control select">
+                                    <select name="examClass" class="form-control select">
                                         <option>Select Class</option>
-                                        <option>LKG</option>
-                                        <option>UKG</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -51,31 +49,19 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Fees</label>
-                                    <input type="text" class="form-control">
+                                    <input name="examSubject" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Start Time</label>
-                                    <input type="time" class="form-control">
+                                    <input name="examStartTime" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>End Time</label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Event Date</label>
-                                    <input type="date" class="form-control">
+                                    <input name="examEndTime" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">
