@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddExamsTable extends Migration
+class CreateAddClassSchedulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateAddExamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('add_exams', function (Blueprint $table) {
+        Schema::create('add_class_schedules', function (Blueprint $table) {
             $table->id();
-            $table->string('examName');
-            $table->string('examClass');
-            $table->string('examSubject');
-            $table->time('examStartTime');
-            $table->time('examEndTime');
+            $table->string('CS_Class');
+            $table->string('CS_Subject');
+            $table->string('CS_date');
+            $table->string('CS_EndTime');
+            $table->string('CS_StartTime');
+           
+
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateAddExamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_exams');
+        Schema::dropIfExists('add_class_schedules');
     }
 }
