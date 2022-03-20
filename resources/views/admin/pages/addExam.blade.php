@@ -15,7 +15,9 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form action="{{route('admin.addExamFrom')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="form-title"><span>Exam Information</span></h5>
@@ -62,6 +64,12 @@
                                 <div class="form-group">
                                     <label>End Time</label>
                                     <input name="examEndTime" type="time" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <input name="examDate" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">

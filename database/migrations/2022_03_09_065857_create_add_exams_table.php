@@ -16,11 +16,11 @@ class CreateAddExamsTable extends Migration
         Schema::create('add_exams', function (Blueprint $table) {
             $table->id();
             $table->string('examName');
-            $table->string('examClass');
+            $table->integer('examClass');
             $table->string('examSubject');
             $table->time('examStartTime');
             $table->time('examEndTime');
-
+            $table->date('examDate');
             $table->timestamps();
         });
     }

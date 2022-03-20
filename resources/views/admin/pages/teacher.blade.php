@@ -27,30 +27,32 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Class</th>
                                     <th>Gender</th>
-                                    <th>Subject</th>
+                                    <!-- <th>Subject</th> -->
                                     <th>Mobile Number</th>
                                     <th>Address</th>
                                     <th class="text-end">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>PRE</td>
+                                @foreach ($teacher as $a)
+                            <tr>
+                                
+                                    <td>{{$a -> id}}</td>
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="teacher-details.html" class="avatar avatar-sm me-2"><img
                                                     class="avatar-img rounded-circle"
-                                                    src="{{url('backend/img/profiles/avatar-01.jpg')}}" alt="User Image"></a>
-                                            <a href="teacher-details.html">Aaliyah</a>
-                                        </h2>
+                                                    src="{{url('/uploads/'.$a->tImage)}}" alt="User Image"></a>
+                                            <a href="teacher-details.html">{{$a -> tName}}</a>
+                                        </h2> 
+                                        
                                     </td>
-                                    <td>10</td>
-                                    <td>Male</td>
-                                    <td>Math</td>
-                                    <td>017********</td>
-                                    <td>911 Deer Ridge Drive,USA</td>
+                                    <td>{{$a -> tGender}}</td>
+                                    <td>{{$a -> tMobile}}</td>
+                                    <td>{{$a -> tAddress}}</td>
+                                    <!-- <td>{{$a -> tName}}</td>
+                                    <td>{{$a -> tName}}</td> -->
                                     <td class="text-end">
                                         <div class="actions">
                                             <a href="{{route('admin.editTeacher')}}" class="btn btn-sm bg-success-light me-2">
@@ -62,6 +64,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

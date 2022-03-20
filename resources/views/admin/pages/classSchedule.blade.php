@@ -33,13 +33,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($classScheduleView as $classSchedule)
                                 <tr>
-                                    <td>PRE2309</td>
-                                    <td>10</td>
-                                    <td>English</td>
-                                    <td>10:00 AM</td>
-                                    <td>01:00 PM</td>
-                                    <td>23 Apr 2020</td>
+                                    <td>{{$classSchedule -> id}}</td>
+                                    <td>{{$classSchedule -> CS_Class}}</td>
+                                    <td>{{$classSchedule -> CS_Subject}}</td>
+                                    <td>{{$classSchedule -> CS_StartTime}}</td>
+                                    <td>{{$classSchedule -> CS_EndTime}}</td>
+                                    <td>{{$classSchedule -> CS_date}}</td>
                                     <td class="text-end">
                                         <div class="actions">
                                             <a href="edit-time-table.html" class="btn btn-sm bg-success-light me-2">
@@ -51,6 +52,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

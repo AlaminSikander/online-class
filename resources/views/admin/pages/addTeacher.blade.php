@@ -15,7 +15,8 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form action="{{route('admin.addTeacherFrom')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="form-title"><span>Basic Details</span></h5>
@@ -24,6 +25,12 @@
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input type="text" name="tName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Image</label>
+                                    <input name="tImage" type="file" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
@@ -102,6 +109,8 @@
                                     <input name="tZipcode" type="text" class="form-control">
                                 </div>
                             </div>
+
+                            
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>

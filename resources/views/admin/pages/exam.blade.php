@@ -33,17 +33,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($examView as $exam)
                                 <tr>
                                     <td>
                                         <h2>
-                                            <a>Class Test</a>
+
+                                            {{$exam -> examName}}
                                         </h2>
+                                        
                                     </td>
-                                    <td>10</td>
-                                    <td>English</td>
-                                    <td>10:00 AM</td>
-                                    <td>01:00 PM</td>
-                                    <td>23 Apr 2020</td>
+                                    <td>{{$exam -> examClass}}</td>
+                                    <td>{{$exam -> examSubject}}</td>
+                                    <td>{{$exam -> examStartTime}}</td>
+                                    <td>{{$exam -> examEndTime}}</td>
+                                    <td>{{$exam -> examDate}}</td>
                                     <td class="text-end">
                                         <div class="actions">
                                             <a href="edit-exam.html" class="btn btn-sm bg-success-light me-2">
@@ -55,6 +58,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

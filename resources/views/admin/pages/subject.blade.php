@@ -32,14 +32,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($subjectView as $subject)
                                 <tr>
-                                    <td>PRE2209</td>
+                                    <td>{{$subject -> id}}</td>
                                     <td>
                                         <h2>
-                                            <a>Mathematics</a>
+                                            <a>{{$subject -> subject_name}}</a>
                                         </h2>
                                     </td>
-                                    <td>5</td>
+                                    <td>
+                                    {{$subject -> subject_class}}
+                                    </td>
+                                    
                                     <td class="text-end">
                                         <div class="actions">
                                             <a href="edit-subject.html" class="btn btn-sm bg-success-light me-2">
@@ -51,6 +55,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
