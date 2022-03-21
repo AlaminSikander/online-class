@@ -17,6 +17,7 @@ class CreateAddTeachersTable extends Migration
             $table->id();
             $table->string('tName');
             $table->string('tImage');
+            $table->foreignId('subject_id');
             $table->string('tGender');
             $table->date('tBOD');
             $table->string('tMobile');

@@ -8,20 +8,23 @@ use App\Models\AddTeacher;
 
 class TeacherController extends Controller
 {
-    public function addTeacher(){
-        return view('admin.pages.addTeacher');
-    }
-
 
     public function editTeacher(){
         return view('admin.pages.editTeacher');
     }
 
 
+    public function addTeacher(){
+        $subjects = Subject::all();
+        return view('admin.pages.addTeacher', compact('subjects'));
+    }
+
     public function teacher(){
-        $teacher = AddTeacher :: all();
+        // $teacher = AddTeacher :: all();
+        $teacher = AddTeacher :: with('subject')->get();
         return view('admin.pages.teacher',compact('teacher'));
     }
+
     
 
     public function addTeacherFrom(Request $request ){
@@ -37,6 +40,7 @@ class TeacherController extends Controller
             [
                 'tName'=> $request->tName,
                 'tImage'=> $filename,
+                'subject_id'=> $request->subject_id,
                 'tGender'=> $request->tGender,
                 'tBOD'=> $request->tBOD,
                 'tMobile'=> $request->tMobile,
@@ -50,6 +54,6 @@ class TeacherController extends Controller
                 'tZipcode'=> $request->tZipcode,
             ]
             );
-            return redirect()->route('admin.teacher');
+            return redirect()->route('admin.teacher.list');
     }
 }

@@ -10,4 +10,7 @@ class AddTeacher extends Model
     use HasFactory;
     protected $guarded = [];
 
+    public function subject(){
+        return $this->belongTo(Subject::class);
+    }
 }

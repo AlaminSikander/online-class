@@ -26,7 +26,7 @@ class ExamController extends Controller
                 'examDate'=> $request->examDate,
             ]
             );
-            return redirect()->route('admin.exam');
+            return redirect()->route('admin.exam.list');
     }
 
 

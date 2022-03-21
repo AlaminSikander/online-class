@@ -24,7 +24,7 @@ class SubjectController extends Controller
                 'subject_class'=> $request->subject_class,
             ]
             );
-            return redirect()->route('admin.subject');
+            return redirect()->route('admin.subject.list');
     }
 
 

@@ -9,22 +9,22 @@
                     <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.student')}}"><i class="fas fa-user-graduate"></i> <span> Students</span></a>
+                    <a href="{{route('admin.student.list')}}"><i class="fas fa-user-graduate"></i> <span> Students</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.teacher')}}"><i class="fas fa-chalkboard-teacher"></i> <span>
+                    <a href="{{route('admin.teacher.list')}}"><i class="fas fa-chalkboard-teacher"></i> <span>
                             Teachers</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.subject')}}"><i class="fas fa-chalkboard-teacher"></i>
+                    <a href="{{route('admin.subject.list')}}"><i class="fas fa-chalkboard-teacher"></i>
                         <span>Subjects</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.exam')}}"><i class="fas fa-clipboard-list"></i> <span>Exam
+                    <a href="{{route('admin.exam.list')}}"><i class="fas fa-clipboard-list"></i> <span>Exam
                             Schedule</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.classSchedule')}}"><i class="fas fa-table"></i> <span>Class
+                    <a href="{{route('admin.classSchedule.list')}}"><i class="fas fa-table"></i> <span>Class
                             Schedule</span></a>
                 </li>
             </ul>

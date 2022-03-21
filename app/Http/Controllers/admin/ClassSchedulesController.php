@@ -29,7 +29,7 @@ class ClassSchedulesController extends Controller
                 
             ]
             );
-            return redirect()->route('admin.classSchedule');
+            return redirect()->route('admin.classSchedule.list');
     }
 
 

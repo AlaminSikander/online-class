@@ -35,6 +35,16 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
+                                    <label>Subject</label>
+                                    <select name="subject_id" class="form-control select">
+                                        @foreach($subjects as $sub)
+                                        <option value="{{$sub->id}}">{{$sub->subject_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
                                     <label>Gender</label>
                                     <select name="tGender" class="form-control select">
                                         <option>Male</option>
