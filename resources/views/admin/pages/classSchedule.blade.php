@@ -37,7 +37,7 @@
                                 <tr>
                                     <td>{{$classSchedule -> id}}</td>
                                     <td>{{$classSchedule -> CS_Class}}</td>
-                                    <td>{{$classSchedule -> CS_Subject}}</td>
+                                    <td>{{optional($classSchedule -> subject)->subject_name}}</td>
                                     <td>{{$classSchedule -> CS_StartTime}}</td>
                                     <td>{{$classSchedule -> CS_EndTime}}</td>
                                     <td>{{$classSchedule -> CS_date}}</td>
@@ -46,7 +46,7 @@
                                             <a href="edit-time-table.html" class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <a href="#" class="btn btn-sm bg-danger-light">
+                                            <a href="{{route('admin.classScheduleDelete', $classSchedule->id)}}" class="btn btn-sm bg-danger-light">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>

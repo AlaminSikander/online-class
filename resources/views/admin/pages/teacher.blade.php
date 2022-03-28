@@ -22,12 +22,14 @@
             <div class="card card-table">
                 <div class="card-body">
                     <div class="table-responsive">
+                    {!! Toastr::message() !!}
                         <table class="table table-hover table-center mb-0 datatable">
                             <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Gender</th>
+                                    <th>Subject</th>
                                     <!-- <th>Subject</th> -->
                                     <th>Mobile Number</th>
                                     <th>Address</th>
@@ -35,30 +37,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($teacher as $a)
+                                @foreach ($teacher as $data)
                             <tr>
                                 
-                                    <td>{{$a -> id}}</td>
+                                    <td>{{$data -> id}}</td>
                                     <td>
                                         <h2 class="table-avatar">
-                                            <a href="teacher-details.html" class="avatar avatar-sm me-2"><img
+                                            <a href="{{route('admin.teacherProfile',$data->id)}}" class="avatar avatar-sm me-2"><img
                                                     class="avatar-img rounded-circle"
-                                                    src="{{url('/uploads/'.$a->tImage)}}" alt="User Image"></a>
-                                            <a href="teacher-details.html">{{$a -> tName}}</a>
+                                                    src="{{url('/uploads/'.$data->tImage)}}" alt="User Image"></a>
+                                            <a href="{{route('admin.teacherProfile', $data->id)}}">{{$data -> tName}}</a>
                                         </h2> 
                                         
                                     </td>
-                                    <td>{{$a -> tGender}}</td>
-                                    <td>{{$a -> tMobile}}</td>
-                                    <td>{{$a -> tAddress}}</td>
-                                    <!-- <td>{{$a -> tName}}</td>
-                                    <td>{{$a -> tName}}</td> -->
+                                    <td>{{$data -> tGender}}</td>
+                                    <td>{{optional($data -> subject)->subject_name}}</td>
+
+                                    <td>{{$data -> tMobile}}</td>
+                                    <td>{{$data -> tAddress}}</td>
                                     <td class="text-end">
                                         <div class="actions">
-                                            <a href="{{route('admin.editTeacher')}}" class="btn btn-sm bg-success-light me-2">
+                                            <a href="{{route('admin.editTeacher',$data->id)}}" class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <a href="#" class="btn btn-sm bg-danger-light">
+                                            <a href="{{route('admin.teacherDelete', $data->id)}}" class="btn btn-sm bg-danger-light">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>

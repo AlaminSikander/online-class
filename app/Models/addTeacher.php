@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class AddTeacher extends Model
 {
@@ -11,6 +11,7 @@ class AddTeacher extends Model
     protected $guarded = [];
 
     public function subject(){
-        return $this->belongTo(Subject::class);
+        
+        return $this->belongsTo(Subject::class);
     }
 }

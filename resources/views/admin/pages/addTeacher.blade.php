@@ -62,7 +62,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Mobile</label>
-                                    <input name="tMobile" type="text" class="form-control">
+                                    <input name="tMobile" type="string" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">

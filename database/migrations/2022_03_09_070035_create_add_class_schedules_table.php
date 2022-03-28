@@ -16,7 +16,7 @@ class CreateAddClassSchedulesTable extends Migration
         Schema::create('add_class_schedules', function (Blueprint $table) {
             $table->id();
             $table->string('CS_Class');
-            $table->string('CS_Subject');
+            $table->foreignId('subject_id');
             $table->date('CS_date');
             $table->time('CS_EndTime');
             $table->time('CS_StartTime');

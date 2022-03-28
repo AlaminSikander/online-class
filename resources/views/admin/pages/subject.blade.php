@@ -49,7 +49,7 @@
                                             <a href="edit-subject.html" class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <a href="#" class="btn btn-sm bg-danger-light">
+                                            <a href="{{route('admin.subjectDelete', $subject->id)}}" class="btn btn-sm bg-danger-light">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>

@@ -16,6 +16,11 @@ class SubjectController extends Controller
         return view('admin.pages.addSubject');
     }
 
+    public function subjectDelete($id){
+        Subject::find($id)->Delete();
+        return redirect()->route('admin.subject.list');
+    }
+
     public function addSubjectFrom(Request $request ){
         Subject::create(
             [

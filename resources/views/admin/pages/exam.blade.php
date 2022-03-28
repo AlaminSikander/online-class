@@ -43,7 +43,7 @@
                                         
                                     </td>
                                     <td>{{$exam -> examClass}}</td>
-                                    <td>{{$exam -> examSubject}}</td>
+                                    <td>{{optional($exam -> subject)->subject_name}}</td>
                                     <td>{{$exam -> examStartTime}}</td>
                                     <td>{{$exam -> examEndTime}}</td>
                                     <td>{{$exam -> examDate}}</td>
@@ -52,7 +52,7 @@
                                             <a href="edit-exam.html" class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <a href="#" class="btn btn-sm bg-danger-light">
+                                            <a href="{{route('admin.examDelete',$exam->id)}}" class="btn btn-sm bg-danger-light">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>

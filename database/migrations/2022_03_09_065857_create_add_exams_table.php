@@ -17,7 +17,7 @@ class CreateAddExamsTable extends Migration
             $table->id();
             $table->string('examName');
             $table->integer('examClass');
-            $table->string('examSubject');
+            $table->foreignId('subject_id');
             $table->time('examStartTime');
             $table->time('examEndTime');
             $table->date('examDate');
