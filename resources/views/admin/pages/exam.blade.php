@@ -23,9 +23,11 @@
                         <table class="table table-hover table-center mb-0 datatable">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Exam Name</th>
                                     <th>Class</th>
                                     <th>Subject</th>
+                                    <th>Link</th>
                                     <th>Start Time</th>
                                     <th>End Time</th>
                                     <th>Date</th>
@@ -35,6 +37,7 @@
                             <tbody>
                                 @foreach ($examView as $exam)
                                 <tr>
+                                    <td>{{$exam -> id}}</td>
                                     <td>
                                         <h2>
 
@@ -44,12 +47,13 @@
                                     </td>
                                     <td>{{$exam -> examClass}}</td>
                                     <td>{{optional($exam -> subject)->subject_name}}</td>
+                                    <td>{{$exam -> examLink}}</td>
                                     <td>{{$exam -> examStartTime}}</td>
                                     <td>{{$exam -> examEndTime}}</td>
                                     <td>{{$exam -> examDate}}</td>
                                     <td class="text-end">
                                         <div class="actions">
-                                            <a href="edit-exam.html" class="btn btn-sm bg-success-light me-2">
+                                            <a href="{{route('admin.examEdit', $exam->id)}}" class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
                                             <a href="{{route('admin.examDelete',$exam->id)}}" class="btn btn-sm bg-danger-light">

@@ -10,8 +10,8 @@ class AddTeacher extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function subject(){
+    public function tSubject(){
         
-        return $this->belongsTo(Subject::class);
+        return $this->belongsTo(Subject::class,'subject_id','id');
     }
 }

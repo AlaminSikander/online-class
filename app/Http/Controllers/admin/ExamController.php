@@ -24,13 +24,41 @@ class ExamController extends Controller
         $subjects = Subject::all();
         return view('admin.pages.addExam', compact('subjects'));
     }
+
+    public function examEdit($id){
+        $exam = AddExam::find($id);
+        $subjects = Subject::all();
+        return view('admin.pages.editExam', compact('subjects', 'exam'));
+    }
+
+
+    public function examUpdate(Request $request,$id ){
+        $exam = AddExam::find($id);
+        $subjects = Subject::all();
+        $exam->update(
+            [
+                'examName'=> $request->examName,
+                'examClass'=> $request->examClass,
+                'subject_id'=> $request->subject_id,
+                'examLink'=> $request->examLink,
+                'examStartTime'=> $request->examStartTime,
+                'examEndTime'=> $request->examEndTime,
+                'examDate'=> $request->examDate,
+            ]
+            );
+            return redirect()->route('admin.exam.list');
+    }
+
+
+
+
     public function addExamFrom(Request $request ){
         AddExam::create(
             [
                 'examName'=> $request->examName,
                 'examClass'=> $request->examClass,
                 'subject_id'=> $request->subject_id,
-                
+                'examLink'=> $request->examLink,
                 'examStartTime'=> $request->examStartTime,
                 'examEndTime'=> $request->examEndTime,
                 'examDate'=> $request->examDate,

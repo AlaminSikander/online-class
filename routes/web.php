@@ -40,6 +40,8 @@ Route::put('admin/updateTeacher/{id}', [TeacherController::class, 'updateTeacher
 Route::get('admin/exam/list', [ExamController::class, 'exam'])->name('admin.exam.list');
 Route::get('admin/addExam', [ExamController::class, 'addExam'])->name('admin.addExam');
 Route::get('admin/exam/delete/{id}', [ExamController::class, 'examDelete'])->name('admin.examDelete');
+Route::get('admin/exam/edit/{id}', [ExamController::class, 'examEdit'])->name('admin.examEdit');
+Route::put('admin/exam/update/{id}', [ExamController::class, 'examUpdate'])->name('admin.examUpdate');
 Route::post('admin/addExam/from', [ExamController::class, 'addExamFrom'])-> name('admin.addExamFrom');
 
 
@@ -52,6 +54,8 @@ Route::get('admin/editStudent', [StudentController::class, 'editStudent'])->name
 Route::get('admin/classSchedule/list', [ClassSchedulesController::class, 'classSchedule'])->name('admin.classSchedule.list');
 Route::get('admin/addClassSchedule', [ClassSchedulesController::class, 'addClassSchedule'])->name('admin.addClassSchedule');
 Route::get('admin/classSchedule/delete/{id}', [ClassSchedulesController::class, 'classScheduleDelete'])->name('admin.classScheduleDelete');
+Route::get('admin/classSchedule/edit/{id}', [ClassSchedulesController::class, 'classScheduleEdit'])->name('admin.classScheduleEdit');
+Route::put('admin/classSchedule/update/{id}', [ClassSchedulesController::class, 'classScheduleUpdate'])->name('admin.classScheduleUpdate');
 Route::post('admin/addClassSchedule/from', [ClassSchedulesController::class, 'addClassScheduleFrom'])-> name('admin.addClassScheduleFrom');
 
 // Subject

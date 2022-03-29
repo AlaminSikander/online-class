@@ -25,7 +25,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" name="tName" class="form-control">
+                                    <input type="text" value="{{$teacher->tName}}" name="tName" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
@@ -39,7 +39,8 @@
                                     <label>Subject</label>
                                     <select name="subject_id" class="form-control select">
                                         @foreach($subjects as $sub)
-                                        <option value="{{$sub->id}}">{{$sub->subject_name}}</option>
+                                        <option value="{{$sub->id}}" {{$sub->id == $teacher->subject_id ? 'selected' : ''}}>
+                                            {{$sub->subject_name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -47,29 +48,29 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Gender</label>
-                                    <select name="tGender" class="form-control select">
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
+                                    <select name="tGender" value="$teacher->tGender" class="form-control select">
+                                        <option @if($teacher->tGender == "Male") selected @endif>Male</option>
+                                        <option @if($teacher->tGender == "Female") selected @endif>Female</option>
+                                        <option @if($teacher->tGender == "Others") selected @endif>Others</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Date of Birth</label>
-                                    <input name="tBOD" type="date" class="form-control">
+                                    <input name="tBOD" value="{{$teacher->tBOD}}" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Mobile</label>
-                                    <input name="tMobile" type="string" class="form-control">
+                                    <input name="tMobile"  value="{{$teacher->tMobile}}" type="string" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Joining Date</label>
-                                    <input name="tJD" type="date" class="form-control">
+                                    <input name="tJD"  value="{{$teacher->tJD}}" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -78,19 +79,19 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input type="text" name="tUsername" class="form-control">
+                                    <input type="text"  value="{{$teacher->tUsername}}" name="tUsername" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Email ID</label>
-                                    <input name="tEmail" type="email" class="form-control">
+                                    <input name="tEmail"  value="{{$teacher->tEmail}}" type="email" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input name="tPassword" type="text" class="form-control">
+                                    <input name="tPassword"  value="{{$teacher->tPassword}}" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -99,25 +100,25 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Address</label>
-                                    <input name="tAddress" type="text" class="form-control">
+                                    <input name="tAddress"  value="{{$teacher->tAddress}}" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>City</label>
-                                    <input name="tCity" type="text" class="form-control">
+                                    <input name="tCity"  value="{{$teacher->tCity}}" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>State</label>
-                                    <input name="tState" type="text" class="form-control">
+                                    <input name="tState"  value="{{$teacher->tState}}" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Zip Code</label>
-                                    <input name="tZipcode" type="text" class="form-control">
+                                    <input name="tZipcode"  value="{{$teacher->tZipcode}}" type="text" class="form-control">
                                 </div>
                             </div>
 

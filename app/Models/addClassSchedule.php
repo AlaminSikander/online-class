@@ -13,4 +13,7 @@ class AddClassSchedule extends Model
     public function subject(){
         return $this->belongsTo(Subject::class);
     }
+    public function teacher(){
+        return $this->belongsTo(AddTeacher::class,'t_id','id');
+    }
 }

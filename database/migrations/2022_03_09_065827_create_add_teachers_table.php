@@ -14,7 +14,7 @@ class CreateAddTeachersTable extends Migration
     public function up()
     {
         Schema::create('add_teachers', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(5001)->unique();
             $table->string('tName');
             $table->string('tImage');
             $table->foreignId('subject_id');

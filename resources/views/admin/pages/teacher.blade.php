@@ -51,7 +51,7 @@
                                         
                                     </td>
                                     <td>{{$data -> tGender}}</td>
-                                    <td>{{optional($data -> subject)->subject_name}}</td>
+                                    <td>{{optional($data -> tSubject)->subject_name}}</td>
 
                                     <td>{{$data -> tMobile}}</td>
                                     <td>{{$data -> tAddress}}</td>

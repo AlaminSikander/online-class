@@ -63,7 +63,8 @@ class TeacherController extends Controller
 
     public function teacher(){
         // $teacher = AddTeacher :: all();
-        $teacher = AddTeacher::with('subject')->get();
+        $teacher = AddTeacher::with('tSubject')->get();
+    
         return view('admin.pages.teacher',compact('teacher'));
     }
 

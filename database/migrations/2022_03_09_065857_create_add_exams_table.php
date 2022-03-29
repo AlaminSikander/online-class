@@ -14,10 +14,11 @@ class CreateAddExamsTable extends Migration
     public function up()
     {
         Schema::create('add_exams', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(6001)->unique();
             $table->string('examName');
             $table->integer('examClass');
             $table->foreignId('subject_id');
+            $table->string('examLink');
             $table->time('examStartTime');
             $table->time('examEndTime');
             $table->date('examDate');
