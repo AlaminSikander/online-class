@@ -29,7 +29,6 @@ class CreateAddTeachersTable extends Migration
             $table->string('tCity');
             $table->string('tState');
             $table->string('tZipcode');
-
             $table->timestamps();
         });
     }
